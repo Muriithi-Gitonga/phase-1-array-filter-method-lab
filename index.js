@@ -1,19 +1,14 @@
 // Code your solution here
 
-function findMatching(driverArray, string) {
-    return driverArray.filter((array) => { 
-        return array.toLowerCase() === string.toLowerCase()
-    })
+function findMatching (array, string) {
+    return array.filter(item => item.toLowerCase() === string.toLowerCase())
 }
 
-function fuzzyMatch(driverArray, string) {
-    return driverArray.filter((array) => { 
-        return array.toUpperCase().substring(0, string.length) === string.toUpperCase() 
-    })
+function fuzzyMatch (array, string) {
+    return array.filter(item => item.toLowerCase().substring(0,string.length) === string.toLowerCase())
+} 
+
+
+function matchName (array, string) {
+    return array.filter(item => item.name === string)
 }
-  
-function matchName(driverArray, string) {
-    return driverArray.filter((array) => { 
-        return array.name === string
-    })
-  }
